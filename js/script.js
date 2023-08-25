@@ -44,7 +44,9 @@ const arrayArreglado = strangeArray.filter(function(elemento) {
   return typeof elemento === 'string';
 });
 
-arrayArreglado.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+arrayArreglado.sort(function(a, b) {
+  return a.localeCompare(b);
+});
 showList(arrayArreglado);
 
 });
